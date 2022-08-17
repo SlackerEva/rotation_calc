@@ -1,6 +1,7 @@
 import './RotationGrid.css';
 import '../RotationRow/RotationRow.css';
 import RotationRow from '../RotationRow/RotationRow.jsx';
+import TagsRow from '../TagsRow/TagsRow.jsx';
 import {optionArr, champArr, create_option} from '../../utils/SelectorsArr.jsx';
 import BonusGrid from '../BonusGrid/BonusGrid.jsx';
 import { useEffect, useState } from 'react';
@@ -20,19 +21,7 @@ function RotationGrid() {
     arr.splice(idx, 1);
     setRotationArr([...arr]);
   }
-/*
-  let showBonus = false;
 
-  function on_handle_click() {
-    if (showBonus === false) {
-      props.setBonuses(undefined);
-      showBonus = true;
-    } else {
-      props.show_callback();
-      showBonus = false;
-    }
-  }
-*/
   function show_bonuses(idx, selected) {
     let newList = rotationArr[idx].selections[selected].bonuses.bonusList;
     setBonuses(newList);
@@ -77,7 +66,7 @@ function RotationGrid() {
         ))}
       </select>
       <p className='rotation-title'>Ротация</p>
-      <div className='rotation-grid'>   
+      <div className='rotation-grid rotation-grid_position-option'>   
         {rotationArr.map((item, idx) => 
           <RotationRow 
             key={idx} 
@@ -87,10 +76,12 @@ function RotationGrid() {
             show_callback={show_bonuses_callback(idx, item.selected)}
           />
         )}
-
         <button className='rotation-grid__buttonAdd rotation-grid__buttonAdd_position' onClick={on_add}>+</button>
       </div>
-      <BonusGrid value={bonuses} setBonuses={setBonuses}/>
+      <div className='rotation-grid rotation-grid_position-tags'>   
+        {rotationArr.map((item, idx) => (<TagsRow  key={idx} option={item} />))}
+      </div>
+      <BonusGrid value={bonuses} setBonuses={setBonuses} />
     </div>
 
     </>

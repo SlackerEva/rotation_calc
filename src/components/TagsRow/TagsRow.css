@@ -1,0 +1,15 @@
+.row-container {
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+.row-container__tags {
+  border: #000 solid 1px;
+  background-color: #00FF75;
+  color: #000;
+  min-width: 110px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  padding: 0 5px;
+}

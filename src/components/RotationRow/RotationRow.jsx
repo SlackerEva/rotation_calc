@@ -1,10 +1,8 @@
 import './RotationRow.css';
 
-
 function RotationRow(props) {
 
   const arr = props.option.selections;
-
   return (
     <div className="row-container">
       <button className="row-container__button" onClick={props.remove_callback}>-</button>

@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .bonus-grid {
   width: 380px;
   height: 520px;
@@ -32,4 +38,24 @@
   color: #fff;
   text-align: center;
   font-size: 16px;
+  border: #000 solid 1px;
+}
+
+.bonus-grid__button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.bonus-grid_buttons-prop {
+  width: 85px;
+  height: 25px;
+  background-color: #2E2E2E;
+  color: #fff;
+  border: #000 solid 1px;
+}
+
+.bonus-grid_buttons-prop:hover {
+  background-color: #FCE5CD;
+  color: #000;
 }

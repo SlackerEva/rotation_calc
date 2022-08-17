@@ -1,8 +1,7 @@
 .rotation-container {
-  margin-left: 75px;
+  margin: 0 75px;
   display: grid;
-  width: 440px;
-  grid-template-columns: 440px 520px;
+  grid-template-columns: 440px auto;
   grid-template-rows: repeat(3, auto);
   grid-template-areas:
   "champSelect ."
@@ -16,6 +15,14 @@
   justify-self: center;
 }
 
+.rotation-grid_position-tags {
+  grid-area: bonus;
+}
+
+.rotation-grid_position-option {
+  grid-area: rotation;
+}
+
 .rotation-title {
   color: #fff;
   font-size: 36px;
@@ -25,10 +32,10 @@
 }
 
 .rotation-grid {
-  display: grid;
+  /*display: grid;
   gap: 58px;
   padding-bottom: 30px;
-  grid-area: rotation;
+  height: 520px;*/
 }
 
 .rotation-grid__buttonAdd {

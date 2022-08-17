@@ -1,6 +1,7 @@
 .row-container {
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
 }
 
 .row-container__button {
@@ -37,4 +38,9 @@
   border: none;
   height: 50px;
   width: 50px;
+}
+
+.row-container__buttonGear:hover {
+  background: url("../../images/GearHover.png") no-repeat;
+  background-position: center;
 }
