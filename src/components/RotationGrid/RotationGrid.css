@@ -1,0 +1,46 @@
+.rotation-container {
+  margin-left: 75px;
+  display: grid;
+  width: 440px;
+  grid-template-columns: 440px 520px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+  "champSelect ."
+  "title ."
+  "rotation bonus";
+  gap: 0 35px;
+}
+
+.selector_position {
+  grid-area: champSelect;
+  justify-self: center;
+}
+
+.rotation-title {
+  color: #fff;
+  font-size: 36px;
+  padding: 68px 0 18px;
+  margin: 0;
+  grid-area: title;
+}
+
+.rotation-grid {
+  display: grid;
+  gap: 58px;
+  padding-bottom: 30px;
+  grid-area: rotation;
+}
+
+.rotation-grid__buttonAdd {
+  background-color: #72F943;
+  color: #000;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+.rotation-grid__buttonAdd_position {
+  justify-self: center;
+}

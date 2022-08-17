@@ -1,0 +1,40 @@
+.row-container {
+  display: flex;
+  align-items: center;
+}
+
+.row-container__button {
+  height: 35px;
+  width: 35px;
+  background-color: #FF6262;
+  border: none;
+  border-radius: 50%;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  margin-right: 21px;
+}
+
+.selector {
+  height: 50px;
+  width: 300px;
+  background-color: #4B4B4B;
+  color: #FFB2B2;
+  text-align: center;
+  font-size: 36px;
+  border: none;
+  appearance: none;
+  background-image: url("../../images/Triangle.png");
+  background-position: center right 17px;
+  background-repeat: no-repeat;
+  margin-right: 35px;
+}
+
+.row-container__buttonGear {
+  background: url("../../images/Gear.png") no-repeat;
+  background-position: center;
+  border: none;
+  height: 50px;
+  width: 50px;
+}

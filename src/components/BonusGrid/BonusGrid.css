@@ -1,0 +1,35 @@
+.bonus-grid {
+  width: 380px;
+  height: 520px;
+  background-color: #4B4B4B;
+  grid-area: bonus;
+  color: #fff;
+  padding: 0 20px 20px 30px;
+}
+
+.bonus-grid__form {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bonus-grid__title {
+  font-size: 36px;
+  margin: 0;
+  padding-bottom: 13px;
+}
+
+.bonus-grid__label {
+  margin-bottom: 10px;
+}
+
+.bonus-grid__input {
+  background-color: #2E2E2E;
+  height: 25px;
+  width: 145px;
+  float:right;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
