@@ -47,7 +47,7 @@ input::-webkit-inner-spin-button {
   margin-top: 5px;
 }
 
-.bonus-grid_buttons-prop {
+.bonus-grid__buttons {
   width: 85px;
   height: 25px;
   background-color: #2E2E2E;
@@ -55,7 +55,7 @@ input::-webkit-inner-spin-button {
   border: #000 solid 1px;
 }
 
-.bonus-grid_buttons-prop:hover {
+.bonus-grid__buttons:hover {
   background-color: #FCE5CD;
   color: #000;
 }

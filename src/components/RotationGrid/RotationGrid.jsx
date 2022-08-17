@@ -2,9 +2,9 @@ import './RotationGrid.css';
 import '../RotationRow/RotationRow.css';
 import RotationRow from '../RotationRow/RotationRow.jsx';
 import TagsRow from '../TagsRow/TagsRow.jsx';
-import {optionArr, champArr, create_option} from '../../utils/SelectorsArr.jsx';
+import { champArr, create_option} from '../../utils/SelectorsArr.jsx';
 import BonusGrid from '../BonusGrid/BonusGrid.jsx';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function RotationGrid() {
   const [rotationArr, setRotationArr] = useState([create_option(0), create_option(1), create_option(2), create_option(3)]);
@@ -23,8 +23,8 @@ function RotationGrid() {
   }
 
   function show_bonuses(idx, selected) {
-    let newList = rotationArr[idx].selections[selected].bonuses.bonusList;
-    setBonuses(newList);
+    let newBonuses = rotationArr[idx].selections[selected].bonuses;
+    setBonuses(newBonuses);
   }
 
   function get_remove_callback(idx) {
@@ -43,7 +43,7 @@ function RotationGrid() {
   function show_bonuses_callback(idx, selected) {
     return function () {
       // by reference
-      if (bonuses === rotationArr[idx].selections[selected].bonuses.bonusList) {
+      if (bonuses === rotationArr[idx].selections[selected].bonuses) {
         setBonuses(undefined);
       } else {
         show_bonuses(idx, selected);
