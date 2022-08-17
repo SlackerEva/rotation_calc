@@ -6,7 +6,8 @@ export const optionArr = [
 ];
 
 function create_bonuses() {
-  return [
+  return {
+    bonusList: [
     {id: 0, bonus: '+ATK/HP/DEF, %', value: 0},
     {id: 1, bonus: '+ATK/HP/DEF', value: 0},
     {id: 2, bonus: '+Мастерство стихий', value: 0},
@@ -18,7 +19,7 @@ function create_bonuses() {
     {id: 8, bonus: '+Срез DEF, %', value: 0},
     {id: 9, bonus: '+Игнор. DEF, %', value: 0},
     {id: 10, bonus: 'xМультипликатор', value: 1},
-  ]
+  ]}
 }
 
 export function create_option(selected=0) {
@@ -37,4 +38,19 @@ export const champArr = [
   {id: 0, name: 'Еимия'},
   {id: 1, name: 'Ху Тао'},
   {id: 2, name: 'Бэнет'},
+];
+
+//удалить и выставлять бонусы из созданых опций
+export const bonusArr = [
+  {id: 0, bonus: '+ATK/HP/DEF, %', value: 0},
+  {id: 1, bonus: '+ATK/HP/DEF', value: 0},
+  {id: 2, bonus: '+Мастерство стихий', value: 0},
+  {id: 3, bonus: '+Бонус реакции, %', value: 0},
+  {id: 4, bonus: '+Крит. шанс, %', value: 0},
+  {id: 5, bonus: '+Крит. урон, %', value: 0},
+  {id: 6, bonus: '+Бонус урона, %', value: 0},
+  {id: 7, bonus: '+Срез RES, %', value: 0},
+  {id: 8, bonus: '+Срез DEF, %', value: 0},
+  {id: 9, bonus: '+Игнор. DEF, %', value: 0},
+  {id: 10, bonus: 'xМультипликатор', value: 1},
 ];

@@ -3,10 +3,11 @@ import '../RotationRow/RotationRow.css';
 import RotationRow from '../RotationRow/RotationRow.jsx';
 import {optionArr, champArr, create_option} from '../../utils/SelectorsArr.jsx';
 import BonusGrid from '../BonusGrid/BonusGrid.jsx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function RotationGrid() {
   const [rotationArr, setRotationArr] = useState([create_option(0), create_option(1), create_option(2), create_option(3)]);
+  const [bonuses, setBonuses] = useState(undefined);
 
   function set_selected(idx, selected) {
     let arr = [...rotationArr];
@@ -14,15 +15,32 @@ function RotationGrid() {
     setRotationArr([...arr]);
   }
 
-  
   function remove_option(idx) {
     let arr = [...rotationArr];
     arr.splice(idx, 1);
     setRotationArr([...arr]);
   }
+/*
+  let showBonus = false;
+
+  function on_handle_click() {
+    if (showBonus === false) {
+      props.setBonuses(undefined);
+      showBonus = true;
+    } else {
+      props.show_callback();
+      showBonus = false;
+    }
+  }
+*/
+  function show_bonuses(idx, selected) {
+    let newList = rotationArr[idx].selections[selected].bonuses.bonusList;
+    setBonuses(newList);
+  }
 
   function get_remove_callback(idx) {
     return function () {
+      setBonuses(undefined);
       remove_option(idx);
     }
   }
@@ -30,6 +48,17 @@ function RotationGrid() {
   function get_selector_callback(idx) {
     return function (selected) {
       set_selected(idx, selected);
+    }
+  }
+
+  function show_bonuses_callback(idx, selected) {
+    return function () {
+      // by reference
+      if (bonuses === rotationArr[idx].selections[selected].bonuses.bonusList) {
+        setBonuses(undefined);
+      } else {
+        show_bonuses(idx, selected);
+      }
     }
   }
 
@@ -55,12 +84,13 @@ function RotationGrid() {
             option={item} 
             selection_callback={get_selector_callback(idx)} 
             remove_callback={get_remove_callback(idx)}
+            show_callback={show_bonuses_callback(idx, item.selected)}
           />
         )}
 
         <button className='rotation-grid__buttonAdd rotation-grid__buttonAdd_position' onClick={on_add}>+</button>
       </div>
-      <BonusGrid />
+      <BonusGrid value={bonuses} setBonuses={setBonuses}/>
     </div>
 
     </>

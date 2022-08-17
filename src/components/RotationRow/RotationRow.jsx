@@ -1,5 +1,4 @@
 import './RotationRow.css';
-import {optionArr} from '../../utils/SelectorsArr.jsx';
 
 
 function RotationRow(props) {
@@ -14,7 +13,7 @@ function RotationRow(props) {
           <option key={option.id} value={option.id}>{option.option}</option>
         ))}
       </select>
-      <button className="row-container__buttonGear"></button>
+      <button className="row-container__buttonGear" onClick={props.show_callback} ></button>
     </div>
   );
 }
