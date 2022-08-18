@@ -3,6 +3,7 @@ import './RotationRow.css';
 function RotationRow(props) {
 
   const arr = props.option.selections;
+  //Теоретически селекторы должны быть отдельным компонентом
   return (
     <div className="row-container">
       <button className="row-container__button" onClick={props.remove_callback}>-</button>

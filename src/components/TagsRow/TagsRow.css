@@ -3,7 +3,7 @@
   align-items: center;
   height: 75px;
 }
-
+/*По макету мои названия не влезают в маленькие плашки. Если сделать все бонусы активными то они не влезают в макет размером w:1980px*/
 .row-container__tags {
   border: #000 solid 1px;
   background-color: #00FF75;

@@ -58,7 +58,6 @@ function RotationGrid() {
   }
 
   return (
-    <>
     <div className='rotation-container'>
       <select className="selector selector_position">
         {champArr.map((name) => (
@@ -83,8 +82,6 @@ function RotationGrid() {
       </div>
       <BonusGrid value={bonuses} setBonuses={setBonuses} />
     </div>
-
-    </>
   );
 }
 

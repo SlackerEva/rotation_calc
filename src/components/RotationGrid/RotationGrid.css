@@ -31,13 +31,6 @@
   grid-area: title;
 }
 
-.rotation-grid {
-  /*display: grid;
-  gap: 58px;
-  padding-bottom: 30px;
-  height: 520px;*/
-}
-
 .rotation-grid__buttonAdd {
   background-color: #72F943;
   color: #000;
